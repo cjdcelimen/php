@@ -1,8 +1,31 @@
 <?php 
 
-    // include and require
-    // if require fails (ex. wrong filename/path), it does not go on with the rest of the code
-    // include carries on with the code
+    // 21 - showing errors
+
+    // 19 & 20 - basic form validation, filter & more validation 
+        // empty()
+        // filter_var(variable we want checked, type of filter we want to apply)
+        // we can use regular expressions if there is no available builtin filter/check applicable
+        // preg_match(regular expression, variable we want checked)
+
+    // 18 - XSS attacks (cross site scripting attacks)
+        // third party injects malicious code into your website and it can occur
+        // anywhere an end user inputs data
+        // for example they input a code to redirect you to a malicious website
+        // this is prevented through htmlspecialchars()
+        //  it looks at the input data and turns any special html characters (e.g. <,")
+        //  into html entities -> safe string version codes for special characters
+
+    // 17 - forms in PHP & isset function
+        // checks whether a certain variable has been set
+        // $_GET - is a global array
+        // when we make a GET/POST request, all data will be stored in our server in this variable
+        // these are called globals (they start with $_)
+        // POST method is more secure since data won't be shown in the address/URL bar
+
+    // 15 - include and require
+        // if require fails (ex. wrong filename/path), it does not go on with the rest of the code
+        // include carries on with the code
     include('reference.php');
     require('reference.php');
     echo 'That\'s include and require <br />';
