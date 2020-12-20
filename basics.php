@@ -1,8 +1,17 @@
 <?php 
+    // be 'framework-agnostic'
+    // not dependent on the framework
+    // reusable code that can be used anywhere
 
-    // 21 - showing errors
+    // explode function
 
-    // 19 & 20 - basic form validation, filter & more validation 
+    // 23 to 27 - communicating with database
+
+    // 22 - checking for errors & redirecting
+        // if no errors, form is valid and redirect to home
+        // array_filter() - cycles through an array and performs a callback function on each iteration
+
+    // 19 to 21 - basic form validation, filter & more validation, showing errors, retaining values
         // empty()
         // filter_var(variable we want checked, type of filter we want to apply)
         // we can use regular expressions if there is no available builtin filter/check applicable
