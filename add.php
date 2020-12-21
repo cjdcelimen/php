@@ -43,7 +43,7 @@ $errors = array('email' => '', 'coffee' => '', 'ingredients' => '');
             
             // save to db and check
             if(mysqli_query($conn, $sql)){
-                // success
+                // success -> redirect
                 header('Location: index.php');
             } else {
                 echo 'query error: ' . mysqli_error($conn);
@@ -62,7 +62,7 @@ $errors = array('email' => '', 'coffee' => '', 'ingredients' => '');
 
     <section class="container grey-text">
         <h4 class="center">Add a Coffee</h4>
-        <form action="add.php" class="white" method="POST">
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" class="white" method="POST">
             <label>Your Email:</label>
             <input type='text' name='email' value="<?php echo htmlspecialchars($email) ?>">
             <div class="red-text"><?php echo $errors['email']; ?></div>

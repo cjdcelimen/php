@@ -3,6 +3,39 @@
     // not dependent on the framework
     // reusable code that can be used anywhere
 
+    // 39, 40 - file system
+        //
+
+    // 38 - cookies
+        // stored on the user's computer not on the server
+        // setcookie(cookiename,value that we apply to that cookie,expiry);
+
+    // 37 - null coalescing 
+        // $name = $_SESSION['name'] ?? 'Guest';
+        // it's like using a default/backup value
+
+    // 36 - sessions
+        // stored on the user's server not on the computer
+        // keeps track of data as a user navigates around a website on different pages until they close the webpage
+        // one practical usage of this is in login functionality, a successful login will redirect them to the homepage 
+        // session_start();
+        // $_SESSION['name'];
+        // unsetting a single session variable - unset($_SESSION['name']);
+        // unset them all - session_unset();
+
+    // 35 - superglobals
+        // special array variables
+        // $_GET['name'], $_POST['name']
+        // $_SERVER['SERVER_NAME'], $_SERVER['REQUEST_METHOD'], $_SERVER['SCRIPT_FILENAME'], $_SERVER['PHP_SELF']
+        // $_SESSION, $_COOKIE
+
+    // 34 - ternary operators
+        // $score = 50;
+        // $rating = $score > 45 ? 'high score!' : 'low score :(';
+        // echo $rating; 
+        // or
+        // echo $score > 45 ? 'high score!' : 'low score :(';
+
     // 29 - control flow alt syntax
         // replace { }
         // example 1:

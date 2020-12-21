@@ -7,7 +7,7 @@
         $sql = "DELETE FROM coffee WHERE id = $id_to_delete";
     
         if(mysqli_query($conn, $sql)){
-            // success
+            // success -> redirect
             header('Location: index.php');
         } else {
             // failure
@@ -50,7 +50,7 @@
             <p><?php echo htmlspecialchars($coffee['ingredients']); ?></p>
 
             <!-- DELETE FORM -->
-            <form action="details.php" method="POST">
+            <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
                 <input type="hidden" name="id_to_delete" value="<?php echo $coffee['id'] ?>">
                 <input type="submit" name="delete" value="Delete" class="btn brand z-depth-0">
             </form>
