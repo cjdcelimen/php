@@ -25,6 +25,7 @@
             <?php foreach($coffees as $coffee): ?>
                 <div class="col s6 md3">
                     <div class="card z-depth-0">
+                    <img src="img/coffee.png" class="coffee">
                         <div class="card-content center">
                             <h6><?php echo htmlspecialchars($coffee['coffee']); ?></h6>
                             <ul>
@@ -34,7 +35,7 @@
                             </ul>
                         </div>
                         <div class="card-action right-align">
-                            <a href="#" class="brand-text">more info</a>
+                            <a href="details.php?id=<?php echo $coffee['id']?>" class="brand-text">more info</a>
                         </div>
                     </div>
                 </div>

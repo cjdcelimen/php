@@ -13,6 +13,13 @@
             margin: 20px auto;
             padding: 20px;
         }
+        .coffee{
+            width: 100px;
+            margin: 30px auto -30px;
+            display: block;
+            position: relative;
+            top: -30px;
+        }
     </style>
 </head>
 </html>
