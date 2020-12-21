@@ -1,12 +1,6 @@
 <?php
 
-    // connect to database
-    $conn = mysqli_connect('localhost', 'cj', 'test1234', 'coffee_monster');
-
-    // check connection
-    if(!$conn){
-        echo 'Connection error: ' . mysqli_connect_error();
-    }
+    include('config/db_connect.php');
 
     // query
     $sql = 'SELECT coffee, ingredients, id FROM coffee ORDER BY created_at';
@@ -28,19 +22,23 @@
     <h4 class="center grey-text">Coffee Menu</h4>
     <div class="container">
         <div class="row">
-            <?php foreach($coffees as $coffee){ ?>
+            <?php foreach($coffees as $coffee): ?>
                 <div class="col s6 md3">
                     <div class="card z-depth-0">
                         <div class="card-content center">
                             <h6><?php echo htmlspecialchars($coffee['coffee']); ?></h6>
-                            <div><?php echo htmlspecialchars($coffee['ingredients']) ?></div>
+                            <ul>
+                                <?php foreach(explode(',', $coffee['ingredients']) as $ing): ?>
+                                    <li><?php echo htmlspecialchars($ing); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
                         <div class="card-action right-align">
                             <a href="#" class="brand-text">more info</a>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endforeach; ?>
         </div>
     </div>
 

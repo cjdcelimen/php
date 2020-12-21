@@ -3,7 +3,25 @@
     // not dependent on the framework
     // reusable code that can be used anywhere
 
-    // explode function
+    // 29 - control flow alt syntax
+        // replace { }
+        // example 1:
+        // foreach(){
+        // }
+        // foreach():
+        // endforeach;
+        
+        // example 2:
+        // if(){
+        // } else {
+        // }
+        // if():
+        // else:
+        // endif;
+
+    // 28 - explode function
+        // explode(separator, string)
+        // we take in a string and explode it into an array and we cycle through that array
 
     // 23 to 27 - communicating with database
 

@@ -1,5 +1,7 @@
 <?php 
 
+include('config/db_connect.php');
+
 $email = $coffee = $ingredients = '';
 $errors = array('email' => '', 'coffee' => '', 'ingredients' => '');
 
@@ -32,8 +34,21 @@ $errors = array('email' => '', 'coffee' => '', 'ingredients' => '');
         if(array_filter($errors)){
             // form got errors
         } else {
-            // no errors -> redirect
-            header('Location: index.php');
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $coffee = mysqli_real_escape_string($conn, $_POST['coffee']);
+            $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+            
+            // create sql
+            $sql = "INSERT INTO coffee(email,coffee,ingredients) VALUES('$email', '$coffee', '$ingredients')";
+            
+            // save to db and check
+            if(mysqli_query($conn, $sql)){
+                // success
+                header('Location: index.php');
+            } else {
+                echo 'query error: ' . mysqli_error($conn);
+            }
+
         }
 
     }
