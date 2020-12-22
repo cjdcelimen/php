@@ -3,8 +3,36 @@
     // not dependent on the framework
     // reusable code that can be used anywhere
 
+    // OOP PHP
+
+    // 41, 42 - classes & objects
+        // public function __construct(){}
+        // getter and setter
+
     // 39, 40 - file system
-        //
+        // readfile($file);
+        // file_exists($file);
+        // copy($file, 'copy.txt'');
+        // realpath($file);
+        // filesize($file);
+        // rename($file, 'renamed.txt'');
+        // mkdir();
+        // open file
+            // $handle = fopen($file, 'r');
+        // read file
+            // fread($handle, filesize($file));
+        // read a single line
+            // fgets($handle);
+        // read a single character
+            // fgets($handle);
+        // writing to a file
+            // $handle = fopen($file, 'r+');
+            // fwrite($handle, "\nThis is the output of writing.")
+            // $handle = fopen($file, 'a+'); - this starts the pointer at the very end therefore adding the new line at the last 
+            // https://www.w3schools.com/php/func_filesystem_fopen.asp
+        // fclose($handle);
+        // delete a file
+            // unlink($file);
 
     // 38 - cookies
         // stored on the user's computer not on the server

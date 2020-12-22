@@ -13,6 +13,39 @@
         header('Location: index.php');
     }
 
+    // classes
+    class User {
+
+        public $email;
+        public $name;
+
+        public function __construct($name, $email){
+            $this->email = $email;
+            $this->name = $name;
+        }
+
+        public function login(){
+            echo $this->name . ' logged in <br />';
+        }
+
+        public function getName(){
+            return $this->name;
+        }
+
+        public function setName($name){
+            if(is_string($name) && strlen($name) > 1){
+                $this->name = $name;
+                return "name has been updated to $name <br />";
+            } else {
+                return 'not a valid name <br />';
+            }
+        }
+    }
+
+    $userOne = new User('cjdc','cjdc@coffeemonster.com');
+    echo $userOne->setName('cjdc');
+    echo $userOne->getName();
+
 ?>
 
 <!DOCTYPE html>
