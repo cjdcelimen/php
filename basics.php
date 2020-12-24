@@ -1,9 +1,61 @@
 <?php 
     // be 'framework-agnostic'
     // not dependent on the framework
-    // reusable code that can be used anywhere
+    // reusable code
 
-    // OOP PHP
+    // 12, 13, 14 - basic form with validation (good sheet)
+        // user validator class to handle validation
+        // constructor which takes in POST data from form
+        // check required fields
+            // array_key_exists(thing we want to check, where)
+        // create methods to validate each field (username and email)
+            // trim() - trims any whitespace
+            // empty()
+            // preg_match(regex, string to be checked)
+            // filter_var(string, FILTER_VALIDATE_EMAIL)
+        // return an error array once all checks are done
+
+    // 11 - static properties
+        // can be accessed via class directly and not via an instance of the class
+        // public static
+
+    // 10 - clone & destruct methods
+        // magic methods
+        // __construct()
+        // __destruct()
+            // destruct - runs a final code whenever the last reference to an object instance is removed
+        // clone
+        // __clone
+
+    // 8, 9 - overriding properties, methods and protected modifier
+        // we can't access private properties from another class even if we extend it
+        // using protected, any class that inherits/extends that class can access its protected variables 
+        // public - can be access anywhere
+        // private - internally only inside the class where it was initially declared
+        // protected - private + any class that inherits/extends it 
+
+    // 7 - inheritance
+        // one class inherits properties & methods from another
+        //public function __construct($username, $email, $level){
+            //$this->level = $level;
+            // use this to inherit parent constructor
+        //    parent::__construct($username, $email);
+        //}
+
+    // 6 - getters & setters
+        // a simple check for email field
+        // if(strpos($email, '@') > -1){
+                // this means if @ is in that string, it will return a value of 0 or any position on that string (positive integer)
+        //}
+
+    // 5 - access modifiers
+        // visibility modifier
+        // public, private and protected
+
+    // 1, 2, 3, 4 - OOP
+        // classes - properties and methods (functions)
+        // constructor
+            // using this, we assign the parameters that we take in to the property values
 
     // 41, 42 - classes & objects
         // public function __construct(){}

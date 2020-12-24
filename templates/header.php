@@ -44,7 +44,6 @@
             <a href='index.php' class='left brand-logo brand-text'>Coffee Monster</a>
             <ul id='nav-mobile' class='right hide-on-small-and-down'>
                 <li class="grey-text">Guten Morgen <?php echo htmlspecialchars($name); ?></li>
-                <li class="grey-text">(<?php echo htmlspecialchars($gender); ?>)</li>
                 <li><a href='add.php' class='btn brand z-depth-0'>Drink Coffee</a></li>
             </ul>
         </div>

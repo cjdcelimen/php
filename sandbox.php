@@ -16,8 +16,8 @@
     // classes
     class User {
 
-        public $email;
-        public $name;
+        private $email;
+        private $name;
 
         public function __construct($name, $email){
             $this->email = $email;
@@ -43,7 +43,7 @@
     }
 
     $userOne = new User('cjdc','cjdc@coffeemonster.com');
-    echo $userOne->setName('cjdc');
+    echo $userOne->setName('dccj');
     echo $userOne->getName();
 
 ?>
