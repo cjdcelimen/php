@@ -3,6 +3,73 @@
     // not dependent on the framework
     // reusable code
 
+    // 16 - MVC naming conventions
+
+    // 15 - eloquent models
+        // a code representation for a specific table in our database
+        // php artisan make:model Pizza
+        // $pizzas = Pizza::all();
+        // $pizzas = Pizza::orderBy('name')->get();
+        // $pizzas = Pizzas::where('type', 'hawaiian');
+        // $pizzas = Pizza::where('type', 'hawaiian')->get();
+        // $pizzas = Pizza::latest()->get();
+
+    // 12, 13, 14 - connecting to MySQL, migration basics, more migrations
+        // C:\xampp\mysql\bin - add to path variables
+        // mysql -u root
+        // create database pizzahouse
+        // edit .env file for DB_DATABASE
+        // in migrations folder files
+            // up function - responsible for creating and defining table structure
+            // down method - deletes
+        // php artisan make:migration create_pizzas_table
+            // php artisan migrate
+            // php artisan migrate:status
+            // php artisan migrate:rollback
+
+    // 11 - controller
+        // a special class in laravel which contains route handler functions
+        // php artisan make:controller PizzaController
+        // when we define functions in a controller, they are called actions
+
+    // 9, 10 - query parameters, route parameters (wildcards)
+
+    // 8 - css and images
+        // <link href="/css/main.css" rel="stylesheet">
+        // <img src="/img/pizzahouse.jpg" alt="pizzahouse">
+
+    // 7 - layout files
+        // extends
+        // section
+        // yield
+
+    // 6 - blade loops
+        // @for()
+        // @endfor
+        // @foreach($pizzas as $pizza)
+        //  {{ $loop-> index }}
+        // @endforeach
+
+    // 5 - blade basics
+        // @if()
+        // @elseif()
+        // @else
+        // @endif
+        // @unless()
+        // @endunless
+        // @php
+        // @endphp
+
+    // 4 - passing data to views
+        // {{ $variable }}
+
+    // 1, 2, 3 - Laravel introduction, setup, basics (routes, views)
+        // composer - dependency manager for PHP
+        // laravel new "project"
+        // php artisan serve
+        // routes return views
+
+
     // 12, 13, 14 - basic form with validation (good sheet)
         // user validator class to handle validation
         // constructor which takes in POST data from form
@@ -136,13 +203,13 @@
         // explode(separator, string)
         // we take in a string and explode it into an array and we cycle through that array
 
-    // 23 to 27 - communicating with database
+    // 23, 24, 25, 26, 27 - communicating with database
 
     // 22 - checking for errors & redirecting
         // if no errors, form is valid and redirect to home
         // array_filter() - cycles through an array and performs a callback function on each iteration
 
-    // 19 to 21 - basic form validation, filter & more validation, showing errors, retaining values
+    // 19, 20, 21 - basic form validation, filter & more validation, showing errors, retaining values
         // empty()
         // filter_var(variable we want checked, type of filter we want to apply)
         // we can use regular expressions if there is no available builtin filter/check applicable

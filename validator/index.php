@@ -3,6 +3,10 @@
 require('validator.php');
 
     if(isset($_POST['submit'])){
+        // session
+        session_start();
+        $_SESSION['username'] = $_POST['username'];
+
         // validate inputs
         $validator = new Validator($_POST);
         $errors = $validator->validateForm();

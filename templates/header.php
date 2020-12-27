@@ -3,10 +3,10 @@
     session_start();
 
     if($_SERVER['QUERY_STRING'] == 'noname'){
-        unset($_SESSION['name']);
+        unset($_SESSION['username']);
     }
 
-    $name = $_SESSION['name'] ?? 'Guest';
+    $name = $_SESSION['username'] ?? 'Guest';
 
     // get cookie
     $gender = $_COOKIE['gender'] ?? 'Unknown';

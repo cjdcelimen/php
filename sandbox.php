@@ -8,7 +8,6 @@
 
         session_start();
         $_SESSION['name'] = $_POST['name'];
-        echo $_SESSION['name'];
         // success -> redirect
         header('Location: index.php');
     }
