@@ -3,7 +3,77 @@
     // not dependent on the framework
     // reusable code
 
+    // 29 - file generation shortcut
+        // models, controllers, migrations
+        // we still have to manually create the routes and views but the models, controllers, migrations can be automatically generated
+            // php artisan make:model Kebab -mc
+
+    // 28 - named routes
+        // in web.php add corresponding ->name('') 
+            // example: Route::get('/pizzas/create', [PizzaController::class, 'create'])->name('pizzas.create');
+        // then in their routes use something like this
+            // example: <a href="{{ route('pizzas.create') }}">Order a Pizza</a>
+        // another example from
+            // <form action="/pizzas/{{ $pizza->id }}" method="POST">
+            // to this
+            // <form action="{{ route('pizzas.destroy'), $pizza->id }}" method="POST">
+
+    // 27 - disabling registration
+        // in web.php Auth::routes
+
+        // Auth::routes([
+        //  'register' => false
+        // ]);
+            // this is done if we don't need anyone to register anymore
+
+    // 25, 26 - customizing auth views, protecting routes
+        // add ->middleware('auth') for each route desired in web.php or
+        // in PizzaController.php, create a new constructor
+
+        // public function __construct(){
+        //  $this->middleware('auth');
+        // }
+            // this will be applied to all pizza action
+            // but we dont want to apply this to /pizzas/create
+            // so we use the first option
+
+    // 24 - Laravel auth setup
+        // composer require laravel/ui
+        // php artisan ui vue --auth
+        // npm install
+        // npm run dev
+            // after the four steps above, it comes with built in registration and login functionality
+
+    // 23 - using SASS
+        // stylesheet language that allows stuff which regular css can't do
+        // npm install
+            // mix - laravel use this to compile our assets like sass
+        // npm run dev 
+            // takes our sass and dump it to our css
+        // npm run watch
+            // automatically detects changes when saved and compiles
+
+    // 22 - removing records  
+        // setup a DELETE request type handler
+
+    // 21 - checkboxes, arrays & json and saving data
+        // php artisan migrate:refresh 
+            // cleans all current data in the db
+            // name="toppings[]"
+            // in the Pizza model, add a casts property
+                // takes an array as a value and any column we pass inside it will cast into a certain data type
+
+    // 19, 20 - post requests, saving records   
+            // GET request 
+            // POST request 
+            // $pizza->save();
+    // 18 - creating a web form
+    // 17 - getting a single record
+
     // 16 - MVC naming conventions
+        // index
+        // show
+        // create
 
     // 15 - eloquent models
         // a code representation for a specific table in our database
